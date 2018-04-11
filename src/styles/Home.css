@@ -1,0 +1,179 @@
+.home-layout
+{
+	margin: auto;
+  	padding: 0;
+}
+
+.about
+{
+	display: grid;
+	grid-template-columns: 10% 70% 10%;
+	grid-template-rows: 20% 80%;
+  	/*border: solid 10px var(--yellow);*/
+  	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.about h1
+{
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 2;
+	grid-row-start: 1 ; 
+}
+
+.about p
+{
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 2;
+	grid-row-start: 2 ; 
+}
+
+.products
+{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-rows: repeat(2, 1fr);
+	
+  	/*border: solid 10px var(--yellow);*/
+  	grid-template-areas: 
+  	"img1 img2"
+
+}
+
+.products .product img
+{
+	/*width: 100%;  */
+    /*height: auto;*/
+    height: auto; 
+    width: auto; 
+    max-width: 15em; 
+    max-height: 15em;
+}
+
+.products .product img .img1 
+{ 
+	grid-area: img1;
+}
+
+.products .product img .img2 
+{ 
+	grid-area: img2;
+}
+
+.features
+{
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: r4% 20%;
+  	/*border: solid 10px var(--purple);*/
+  	/*grid-template-areas: 
+  	"space space space items space space space"
+  	"space item1 space item2 space item3 space"*/
+}
+
+
+.features .fi
+{
+	grid-area: items;
+	grid-column: 3 / span 3;
+	grid-row-start: 1;
+}
+
+
+.item
+{
+	background: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 20%;
+
+	/*border: solid 10px var(--red);*/
+}
+
+.item img
+{
+	width: 7em;
+	box-shadow: 10px -10px 5px #CCC;
+}
+
+.item img .i1
+{
+	grid-area: item1;
+	grid-column-start: 2;
+	grid-row-start: 2;
+	/*align-self: center;
+	justify-content: center;
+	align-content: center;*/
+	
+}
+
+
+.banner
+{
+  display: grid;
+/*  border: solid 10px var(--red);*/
+  grid-template-columns: repeat(12, 1fr) ;
+  grid-template-rows: repeat(18, 1fr);
+  object-fit: cover;
+  background: url("../images/snack.jpg") no-repeat 50% 0;
+  width: 100%;  
+  height: 80vh;
+}
+
+.slogan
+{
+  color: #FFAFBD;
+ /* border: solid 10px red;*/
+  grid-column: 5 / span 4;
+  grid-row: 3 / 15;
+  align-content: center;
+  justify-content: center;
+}
+
+.banner button
+{
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.banner .button1
+{
+  grid-column: 4 / span 2;
+  background-image: linear-gradient(90deg, #7b81ec,  #3bd1d3);
+  grid-row: 12 / 13; 
+  padding: 1em 1em;
+}
+
+.banner .button1:before 
+{
+  background-image: linear-gradient(90deg,  #7b81ec, transparent);
+}
+
+.banner .button1:after
+ {
+  background-image: linear-gradient(90deg, transparent, #3bd1d3);
+}
+
+.banner .button2
+{
+  grid-column: 8 / span 2;
+  background-image: linear-gradient(90deg, #fa80d2, #fed757);
+  grid-row: 12 / 13; 
+  padding: 1em 1em;
+}
+
+.banner .button2:before 
+{
+  background-image: linear-gradient(90deg,  #fa80d2, transparent);
+}
+
+.banner .button2:after 
+{
+  background-image: linear-gradient(90deg, transparent, #fed757);
+}

@@ -1,0 +1,41 @@
+.containerLogIn
+{
+  margin: 0;
+  padding: 0;
+}
+
+#login-form {
+  position: relative;
+  height: 40%;
+  width: 90%;
+  left: 50%;
+  margin-right: -50%;
+  background-color: #6864ec;
+  padding: 3em;
+  font-family: sans-serif;
+  min-height: 35em;
+  color: white;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.52);
+   transform: translate(-50%, -50%);
+}
+
+#login-form-content {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login-form-content input {
+  font-size: 1.5em;
+}
+
+#login-form-content a {
+  text-decoration: none;
+  color: #28a745;
+}
+
+#login-form-content button {
+  font-size: 1.5em;
+}

@@ -1,0 +1,64 @@
+.header-layout
+{
+  margin: auto;
+  padding: 0;
+}
+
+.header-layout .container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-gap: 15px;
+  /*border: solid 10px var(--yellow);*/
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: 
+  "logo feature1 feature2 feature3 feature4"
+}
+
+.logo
+{
+  grid-area: logo;
+  width: 40%;
+}
+
+
+.feature1
+{
+  grid-area: feature1;
+}
+
+.feature2
+{
+  grid-area: feature2;
+}
+
+.feature3
+{
+  grid-area: feature3;
+}
+
+.feature4
+{
+  grid-area: feature4;
+}
+
+
+@media (max-width: 700px)
+{
+  .container
+  {
+    grid-template-areas: 
+    "logo"
+    "feature1"
+    "feature2"
+    "feature3"
+    "feature4"
+  }
+}
+
+
+
+
+
