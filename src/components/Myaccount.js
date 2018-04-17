@@ -24,7 +24,6 @@ class Myaccount extends Component {
     this.setState({password: event.target.value});
   }
 
-  // You need credentials: "same-origin" for express session to work.
   handleSubmit(event) {
     event.preventDefault();
     let {email, password} = this.state;

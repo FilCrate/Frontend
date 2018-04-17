@@ -9,53 +9,57 @@ class Home extends Component {
     				<h1 className="slogan"> Slogan here!</h1>
        				<button className="button1"> Shop Now </button>
     				<button className="button2"> Subscribe! </button>
-	    		</div>  
-            	<div className="about">
+	    		</div> 
+	    		<div className="about">
                 	<h1>What is FilCrate?</h1>
                 	<p>Paragraphs are the building blocks of papers. 
-                	Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
-                	 In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. 
-                	 A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). 
-            		 </p>
+                		Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
+                	 	In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. 
+                	 	A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). 
+            		</p>
+
+            		<div className = "products">
+						<div className = "product">
+							<img className = "img1" src = {require('../images/box.jpg')}/>
+						</div>
+						<div className = "product">
+							<img className = "img2" src = {require('../images/box.jpg')}/>
+						</div>
+					</div>
                 </div>
 
-                <div className = "products">
-					<div className = "product">
-						<img className = "img1" src = {require('../images/box.jpg')}/>
-					</div>
+                <div className = "features">
+					<div className="fi"> Features Items </div>
+					<div className="slide">
+						<div className = "item">
+							<img className = "i1" src = {require('../images/milo.jpg')}/>
+							<div className="detail">
+								<h3> Nestle Milo </h3>
+								<p> Price: $5.30 </p>	
+							</div>
+						</div>	
 
-					<div className = "product">
-						<img className = "img2" src = {require('../images/box.jpg')}/>
+						<div className = "item">
+							<img className = "i1" src = {require('../images/milo.jpg')}/>
+							<div className="detail">
+								<h3> Nestle Milo </h3>
+								<p> Price: $5.30 </p>	
+							</div>
+						</div>	
+
+						<div className = "item">
+							<img className = "i1" src = {require('../images/milo.jpg')}/>
+							<div className="detail">
+								<h3> Nestle Milo </h3>
+								<p> Price: $5.30 </p>	
+							</div>
+						</div>		
 					</div>
+				
 				</div>
+		    	
 
-				<div className = "features">
-					<div>  </div>
-					<div>  </div>
-					<div className ="fi"> Features Items </div>
-					<div>  </div>
-					<div>  </div>
-					<div>  </div>
-					<div className = "item">
-						<img className = "i1" src = {require('../images/milo.jpg')}/>
-						<h3> Nestle Milo </h3>
-						<p> Price: $5.30 </p>			
-					</div>
-					<div>  </div>
-					<div className = "item">
-						<img className = "i1" src = {require('../images/milo.jpg')}/>
-						<h3> Nestle Milo </h3>
-						<p> Price: $5.30 </p>	
-					</div>
-					<div>  </div>
-					<div className = "item">
-						<img className = "i1" src = {require('../images/milo.jpg')}/>
-						<h3> Nestle Milo </h3>
-						<p> Price: $5.30 </p>	
-					</div>
-					<div>  </div>			
-				</div>
-
+				
             </div>
         );
     }
