@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Header.css';
 
+
 class Header extends Component {
     constructor() {
         super();
@@ -36,7 +37,7 @@ class Header extends Component {
                     <img className ="header-logo" src = {require('../images/logo.png')} />
                     <a style={{color: sColor}} className="header-features" href="#">Crates</a>
                     <a style={{color: sColor}} className="header-features" href="#">Stores</a>
-                    <a style={{color: sColor}} className="header-features" href="/Myaccount">My Account</a>
+                    <a style={{color: sColor}} className="header-features" href="/login">My Account</a>
                     <a style={{color: sColor}} className="header-features" href="#"> <i className ="fa fa-shopping-cart"></i> Cart</a>      
                 </div>
         	</div>

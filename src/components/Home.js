@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FeaturedItems from './FeaturedItems';
-import Footer from './Footer';
 import '../styles/Home.css';
+
 
 class Home extends Component {
     render() {
@@ -34,7 +34,6 @@ class Home extends Component {
 						<FeaturedItems />
 					</div>
 				</div>
-				<Footer />
 			</div>
         );
     }
