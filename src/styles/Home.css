@@ -2,9 +2,9 @@
 {
 	display: grid;
 	margin: auto;
-  	padding: 0;
-  	grid-template-columns: 10% 80% 10%;
-  	grid-template-rows: 60% 20% 40%;
+  padding: 0;
+	grid-template-columns: 10% 80% 10%; 
+	grid-template-rows: 60% 20% 40%;
 }
 
 .banner
@@ -27,7 +27,7 @@
 {
   color: #FFAFBD;
   grid-column-start: 3 ;
-  grid-row: 2 / 6;
+  grid-row: 3 / 6;
   align-content: center;
   justify-content: center;
 }
@@ -75,80 +75,40 @@
   background-image: linear-gradient(90deg, transparent, #fed757);
 }
 
-.about
+.home-container 
 {
-  	grid-column: 1 / span 3;
-  	text-align: center;
-    width: 80%;
-    padding: 10px;
+	grid-column-start: 2;
 }
 
+.about 
+{
+	text-align: center;
+	padding: 20px;
+}
 
 .about h1
 {
-	align-self: center;
-	justify-self: center;
-	grid-column-start: 2;
-	grid-row-start: 1 ; 
+	padding: 10px;
 }
 
 .about p
 {
-	align-self: center;
-	grid-column-start: 2;
-	grid-row-start: 2 ; 
+	padding: 20px 10vw;
 }
-
 
 .products
 {
 	display: grid;
 	grid-gap: 15px;
 	grid-template-columns: repeat(auto-fit, 1fr);
-  	grid-template-areas: 
-  	"img1 img2"
+	grid-template-areas: 
+	"img1 img2"
 }
 
 .products .product img
 {
-    height: auto; 
-    width: auto; 
-    max-width: 22em; 
-    max-height: 15em;
-}
-
-.features
-{
-	display: grid;
-	width: 100%;
-	grid-column-start: 2;
-}
-
-.features .fi
-{
-	align-self: center;
-	font-size: 2em;
-	grid-row-start: 1 ; 
-}
-
-.features .slide
-{
-	display: grid;
-	grid-gap: 40px;
-	grid-template-columns: repeat(4,30%);
-}
-
-
-.item
-{
-	background: white;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	padding: 10px;
-	border-radius: 20%;
-}
-
-.item img
-{
-	width: 7em;
-	box-shadow: 10px -10px 5px #CCC;
+	height: auto; 
+	width: auto; 
+	max-width: 22em; 
+	max-height: 15em;
 }

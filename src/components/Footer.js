@@ -4,7 +4,9 @@ import '../styles/Footer.css';
 class Footer extends Component {
     render() {
         return (
-            <footer></footer>
+            <footer>
+                FilCrate 2018
+            </footer>
         );
     }
 }

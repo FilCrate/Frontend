@@ -1,0 +1,14 @@
+.ItemCard
+{
+    justify-self: center;
+	background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* width: 14rem; */
+	padding: 20px;
+}
+
+.ItemImage
+{
+    width: 80%;
+    margin-bottom: 1.2rem;
+}

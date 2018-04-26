@@ -1,0 +1,24 @@
+.featured
+{
+    text-align: center;
+	display: grid;
+    width: 100%;
+    padding: 20px;
+	grid-column-start: 2;
+}
+
+.featured .fi
+{
+	align-self: center;
+	font-size: 2em;
+    grid-row-start: 1 ;
+    padding-bottom: 30px;
+}
+
+.featured .slide
+{
+	display: grid;
+	grid-gap: 40px;
+    grid-template-columns: repeat(3,30%);
+    justify-content: center;
+}
