@@ -15,12 +15,12 @@ class Header extends Component {
         window.scroll(0,0); 
         window.onscroll = () => {
             const newScrollHeight = (Math.ceil(window.scrollY) / 2) * 0.01;
-            if (((255 - window.scrollY) >= 0) && ((255 - window.scrollY) <= 255)) {
-                const newColor = (Math.ceil(255 - window.scrollY));
-                this.setState({
-                    color: newColor
-                })
-            }
+            // if (((255 - window.scrollY) >= 0) && ((255 - window.scrollY) <= 255)) {
+            //     const newColor = (Math.ceil(255 - window.scrollY));
+            //     this.setState({
+            //         color: newColor
+            //     })
+            // }
             this.setState({
                 opacity: newScrollHeight
             })
@@ -34,7 +34,7 @@ class Header extends Component {
         return (
         	<div style={{backgroundColor: bg}} className="header-layout">
         		<div className="header-container">
-                    <img className ="header-logo" src = {require('../images/logo.png')} />
+                    <a href="/"><img className ="header-logo" src={require('../images/logo.png')} /></a>
                     <a style={{color: sColor}} className="header-features" href="#">Crates</a>
                     <a style={{color: sColor}} className="header-features" href="#">Stores</a>
                     <a style={{color: sColor}} className="header-features" href="/login">My Account</a>

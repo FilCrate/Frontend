@@ -22,5 +22,6 @@
 
 .header-features {
   justify-self: center;
+  color: rgb(0,0,0);
   margin: 0;
 }

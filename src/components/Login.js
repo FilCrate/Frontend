@@ -61,16 +61,30 @@ handleSubmit(event) {
         }
 
         return (
-            <div className = "containerLogIn"> 
+            <div className="containerLogIn"> 
                 <form onSubmit={this.handleSubmit} className="jumbotron jumbotron-fluid m-0" id="login-form" noValidate>
                     <div className="container" id="login-form-content">
-                    <h1 className="text-white text-center">Sign in</h1>
+                        <h1 className="text-white text-center">Sign in</h1>
                         <div className="row">
-                        <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} className="form-control col-12 mb-3" id="email-login" required/>
-                        <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange} className="form-control col-12 mb-3" id="password-login" required/>
-                        <button type="submit" className="btn btn-success col-4 mb-3 mx-auto">Login</button>
-                        <span className="col-12 text-white text-center">Don't have an account? <a href="/register">Register</a></span>
-                    </div>
+                            <input 
+                                className="form-control col-12 mb-3" 
+                                id="email-login" 
+                                type="email" 
+                                placeholder="Email" 
+                                value={this.state.email} 
+                                onChange={this.handleEmailChange} 
+                                required/>
+                            <input 
+                                className="form-control col-12 mb-3" 
+                                id="password-login" 
+                                type="password" 
+                                placeholder="Password" 
+                                value={this.state.password} 
+                                onChange={this.handlePasswordChange} 
+                                required/>
+                            <button type="submit" className="btn btn-success col-4 mb-3 mx-auto">Login</button>
+                            <span className="col-12 text-white text-center">Don't have an account? <a href="/register">Register</a></span>
+                        </div>
                     </div>
                 </form>
             </div>
