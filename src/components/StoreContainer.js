@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import ItemList from './ItemList';
+import JwPagination from 'jw-react-pagination';
 
 class StoreContainer extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-                data: [{}],
+                data: [],
+                pageOfItems: []
         };
+        this.onChangePage = this.onChangePage.bind(this);
 	}
 
 	fetchProduct() {
@@ -22,22 +25,32 @@ class StoreContainer extends Component {
             const items = respJson.map(item => {
                 return item;
             });
-			console.log(items);
             this.setState({
                 data: items
             })
         })
 	}
 
-	render() {
+	componentDidMount(){
 		this.fetchProduct();
+	}
+
+	onChangePage(pageOfItems) {
+        this.setState({ pageOfItems });
+    }
+
+	render() {
 		return(
-			<div>
-				{this.state.data.map(item => {return item.name;})}
-				<ItemList items={this.state.data} />
+			<div className="container">
+				<ItemList items={this.state.pageOfItems.slice(0,3)} />
+				<ItemList items={this.state.pageOfItems.slice(3,6)} />
+				<ItemList items={this.state.pageOfItems.slice(6,9)} />
+				<JwPagination items={this.state.data} onChangePage={this.onChangePage} pageSize={10}/>
 			</div>
 		)
 	}
 }
+
+
 
 export default StoreContainer;

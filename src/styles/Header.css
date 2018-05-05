@@ -4,13 +4,16 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(255,255,255,0);
+  background-color: #990000;
 }
 
 .header-container {
   display: grid;
   grid-template-columns: 1fr .2fr .2fr .2fr .2fr;
   align-items: center;
+  font-family: Palatino;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .header-logo {
@@ -22,6 +25,10 @@
 
 .header-features {
   justify-self: center;
-  color: rgb(0,0,0);
+  color: white;
   margin: 0;
+}
+
+i {
+  color: black;
 }

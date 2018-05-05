@@ -7,7 +7,7 @@ class Header extends Component {
         super();
         this.state = {
             opacity: 0,
-            color: 0,
+            color: 255,
         }
     }
 
@@ -22,7 +22,8 @@ class Header extends Component {
             //     })
             // }
             this.setState({
-                opacity: newScrollHeight
+                opacity: newScrollHeight,
+                color: newScrollHeight*1
             })
         }
     }
@@ -36,7 +37,7 @@ class Header extends Component {
         		<div className="header-container">
                     <a href="/"><img className ="header-logo" src={require('../images/logo.png')} /></a>
                     <a style={{color: sColor}} className="header-features" href="#">Crates</a>
-                    <a style={{color: sColor}} className="header-features" href="#">Stores</a>
+                    <a style={{color: sColor}} className="header-features" href="/store">Stores</a>
                     <a style={{color: sColor}} className="header-features" href="/login">My Account</a>
                     <a style={{color: sColor}} className="header-features" href="#"> <i className ="fa fa-shopping-cart"></i> Cart</a>      
                 </div>
