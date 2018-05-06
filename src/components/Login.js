@@ -64,7 +64,7 @@ handleSubmit(event) {
             <div className="containerLogIn"> 
                 <form onSubmit={this.handleSubmit} className="jumbotron jumbotron-fluid m-0" id="login-form" noValidate>
                     <div className="container" id="login-form-content">
-                        <h1 className="text-white text-center">Sign in</h1>
+                        <h1 className="text-center">Sign in</h1>
                         <div className="row">
                             <input 
                                 className="form-control col-12 mb-3" 
