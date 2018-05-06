@@ -8,5 +8,10 @@
 }
 
 .card {
-	padding: 20px;
+	overflow: auto;
+}
+
+.img {
+	width: 60%;
+	height: 60%;
 }

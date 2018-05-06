@@ -5,6 +5,7 @@
   "dependencies": {
     "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
+    "jw-react-pagination": "^1.0.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-materialize": "^2.2.0",

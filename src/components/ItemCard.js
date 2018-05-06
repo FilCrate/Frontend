@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import {Card, CardTitle} from 'react-materialize';
 import '../styles/ItemCard.css';
 
-/*
-    {this.props.itemImage}
-    {this.props.itemName}
-    {this.props.itemPrice}
-*/
-
 class ItemCard extends Component {
 
     getImage(){
@@ -20,12 +14,13 @@ class ItemCard extends Component {
 
     render () {
         return (
-            <Card className="card"
-                header={<CardTitle image={this.getImage()}>Card Title</CardTitle>}
-            >
-            <p>{this.props.itemName}</p>
-            <p>Price: ${this.props.itemPrice}</p>
-            </Card> 
+            <div className="card">
+                <div className="text-center">
+                    <img className="img" src={this.getImage()} />
+                    <p>{this.props.itemName}</p>
+                    <p>Price: ${this.props.itemPrice}</p>
+                </div>
+            </div> 
         )
     }
 }
