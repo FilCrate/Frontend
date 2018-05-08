@@ -1,7 +1,6 @@
 Footer {
     text-align: center;
     color: white;
-<<<<<<< HEAD
     padding: 10px;
     margin-top: 1rem;
     background-color: black;
@@ -42,9 +41,4 @@ p {
   background: #fffc00;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-=======
-    padding: 30px;
-    margin-top: 1.7rem;
-    background-color: #990000;
->>>>>>> b1d37ab24199d71ad048037eaaeb254f7bb12da8
 }

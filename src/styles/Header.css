@@ -29,7 +29,6 @@
   margin: 0;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
   .header-container .header-logo {
     width: 100%;
@@ -38,8 +37,8 @@
   .header-container .header-features {
     width: 100%;
   }
-=======
+}
+
 i {
   color: black;
->>>>>>> b1d37ab24199d71ad048037eaaeb254f7bb12da8
 }
