@@ -7,39 +7,60 @@ class Header extends Component {
         super();
         this.state = {
             opacity: 0,
-            color: 255,
+            color: 'white',
+            fil: 'white',
+            crate: 'white'
         }
     }
 
-    componentDidMount () {     
-        window.scroll(0,0); 
-        window.onscroll = () => {
-            const newScrollHeight = (Math.ceil(window.scrollY) / 2) * 0.01;
-            // if (((255 - window.scrollY) >= 0) && ((255 - window.scrollY) <= 255)) {
-            //     const newColor = (Math.ceil(255 - window.scrollY));
-            //     this.setState({
-            //         color: newColor
-            //     })
-            // }
+    componentDidMount() {     
+        window.scroll(0,0);
+        if (window.location.pathname !== '/') {
             this.setState({
-                opacity: newScrollHeight,
-                color: newScrollHeight*1
+                opacity: 255,
+                color: 'black',
+                fil: '#990000',
+                crate: '#000ecf'
             })
+        }
+        window.onscroll = () => {
+            if (window.scrollY >= 100) {
+                this.setState({
+                    opacity: 255,
+                    color: 'black',
+                    fil: '#990000',
+                    crate: '#000ecf'
+                })
+            }
+            if ((window.scrollY < 100) && (window.location.pathname === '/')) {
+                this.setState({
+                    opacity: 0,
+                    color: 'white',
+                    fil: 'white',
+                    crate: 'white'
+                })
+            }
         }
     }
     
     render() {
         const x = this.state;
         let bg = `rgb(255,255,255,${x.opacity})`;
-        let sColor = `rgb(${x.color},${x.color},${x.color})`;
         return (
         	<div style={{backgroundColor: bg}} className="header-layout">
         		<div className="header-container">
-                    <a href="/"><img className ="header-logo" src={require('../images/logo.png')} /></a>
-                    <a style={{color: sColor}} className="header-features" href="/crates">Crates</a>
-                    <a style={{color: sColor}} className="header-features" href="/store">Stores</a>
-                    <a style={{color: sColor}} className="header-features" href="/login">My Account</a>
-                    <a style={{color: sColor}} className="header-features" href="#"> <i className ="fa fa-shopping-cart"></i> Cart</a>      
+                    <a href="/" className="header-logo">
+                        <p className="header-border">
+                            <span style={{color: x.fil}} className="header-fil">Fil</span>
+                            <span style={{color: x.crate}} className="header-crate">Crate</span>
+                        </p>
+                    </a>
+                    <a style={{color: x.color}} className="header-features" href="/crates">Crates</a>
+                    <a style={{color: x.color}} className="header-features" href="/store">Store</a>
+                    <a style={{color: x.color}} className="header-features" href="/login">My Account</a>
+                    <a style={{color: x.color}} className="header-features" href="#">
+                        <i style={{color: x.color}} className ="fa fa-shopping-cart header-features"></i>Cart
+                    </a>      
                 </div>
         	</div>
         );
