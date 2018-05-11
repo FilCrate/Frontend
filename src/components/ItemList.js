@@ -6,8 +6,9 @@ class ItemList extends Component {
 		return(
 			this.props.items.map(item => 
 				<ItemCard 
-					className="col-sm"
+					className="col-md-4 col-sm-6"
 					key={item.key}
+					itemId={item.id}
 					itemName={item.name}
 					itemImage={item.image}
 					itemPrice={item.price}
@@ -20,7 +21,7 @@ class ItemList extends Component {
 	// this.renderItemCard() so that its always being called
 	render() {
 		return(
-			<div className="row items">
+			<div className="row">
 				{this.renderItemCards()}
 			</div>
 		)

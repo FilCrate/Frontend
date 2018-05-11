@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ItemList from './ItemList';
 import JwPagination from 'jw-react-pagination';
+import '../styles/ItemCard.css';
 
 class StoreContainer extends Component {
 	constructor(props) {
@@ -41,11 +42,13 @@ class StoreContainer extends Component {
 
 	render() {
 		return(
-			<div className="container">
-				<ItemList items={this.state.pageOfItems.slice(0,3)} />
-				<ItemList items={this.state.pageOfItems.slice(3,6)} />
-				<ItemList items={this.state.pageOfItems.slice(6,9)} />
-				<JwPagination items={this.state.data} onChangePage={this.onChangePage} pageSize={10}/>
+			<div className="row" id="results">
+				<ItemList items={this.state.pageOfItems.slice(0,4)} />
+				<ItemList items={this.state.pageOfItems.slice(4,8)} />
+				<ItemList items={this.state.pageOfItems.slice(8,12)} />
+				<div className="row" style={{ display: 'block' }}>
+					<JwPagination items={this.state.data} onChangePage={this.onChangePage} pageSize={12}/>
+				</div>
 			</div>
 		)
 	}

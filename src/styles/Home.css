@@ -25,9 +25,9 @@
 
 .slogan
 {
-  color: #FFAFBD;
-  grid-column-start: 3 ;
-  grid-row: 3 / 6;
+  color: #fff;
+  grid-column: 2/-1;
+  grid-row: 3/ -1;
   align-content: center;
   justify-content: center;
 }
@@ -88,12 +88,14 @@
 
 .about h1
 {
-	padding: 10px;
+	color: #000;
 }
 
 .about p
 {
-	padding: 20px 10vw;
+	padding: 0 10vw 20px 10vw;
+	line-height: 1.6em;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .products
