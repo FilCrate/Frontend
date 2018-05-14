@@ -9,7 +9,8 @@ class Header extends Component {
             opacity: 0,
             color: 'white',
             fil: 'white',
-            crate: 'white'
+            crate: 'white',
+            shadow: ''
         }
     }
 
@@ -20,7 +21,8 @@ class Header extends Component {
                 opacity: 255,
                 color: 'black',
                 fil: '#990000',
-                crate: '#000ecf'
+                crate: '#000ecf',
+                shadow: '0 5px 10px 0px gray'
             })
         }
         window.onscroll = () => {
@@ -47,7 +49,7 @@ class Header extends Component {
         const x = this.state;
         let bg = `rgb(255,255,255,${x.opacity})`;
         return (
-        	<div style={{backgroundColor: bg}} className="header-layout">
+        	<div style={{backgroundColor: bg, boxShadow: x.shadow}} className="header-layout">
         		<div className="header-container">
                     <a href="/" className="header-logo">
                         <div className="logo text-center">

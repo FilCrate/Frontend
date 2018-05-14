@@ -1,272 +1,94 @@
 import React, { Component } from 'react';
-import FeaturedItems from './FeaturedItems';
-
 import '../styles/Crates.css';
 
 
 class Crates extends Component {
-  constructor() {
-    super();
-    this.state = {
-        search: ""
-    }
-    this.handleSearchChange = this.handleSearchChange.bind(this);
-  }
-
-
-  handleSearchChange(event) {
-    this.setState({search: event.target.value});
-  }
-
-  handleSubmit(event) {
-    // event.preventDefault();
-    // let {search} = this.state;
-    // fetch("/products", {
-    //     method: "post",
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     credentials: "same-origin",
-    //     body: JSON.stringify({
-    //         products:products
-    //     })
-    // })
-    // .then(res => {
-    //     if(res.status === 200) {
-    //         this.setState({isLoggedIn: true});        
-    //         this.props.onAuthChange(true);
-    //     }
-    // })
-    // .catch(err => {
-    // console.log(err.message);
-    // });
-  }
-
-
     render() {
         return (
-        	<div>
-  		  		<div onSubmit={this.handleSubmit} className="containerCrates">
-  				    <div className="row">
-    				    <div className="searchBarMain col-md-5">
-                  <i className="material-icons searchBarSearchIcon Select">search</i>
-                  <input 
-                    type="text" 
-                    name="header-search" 
-                    value="" 
-                    id="searchBarInput"
-                    placeholder="Search..."
-                    value={this.state.search} 
-                    onChange={this.handleSearchChange} 
-                    required />
-                </div>    
-          
-  				      
-                <div className="col-md-4">
-  				        <div className="dropdown">
-  						  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  						    Categories
-  						  </button>
-  						  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  						    <a className="dropdown-item" href="#">Fruit</a>
-  						    <a className="dropdown-item" href="#">Sweet</a>
-  						    <a className="dropdown-item" href="#">Snack</a>
-  						  </div>
-  						</div>
-  				      </div>
-  				    </div>
-
-  				    <div className='row Products'>
-    						<div className='product1 col-md-3'>
-      						<div className='product_inner '>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
-        							<p>Milo</p>
-        							<p>Price $10</p>
-       							<button>Add to basket</button>
-      						</div>
-      
-      						<div className='product_overlay'>
-        							<h2>Added to basket</h2>
-        							<i className='fa fa-check'></i>
-      						</div>
-    						</div>
-    
-    						<div className='product2 col-md-3'>
-     		 					<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-        							<p>Milo</p>
-        							<p>Price $10</p>
-        							<button>Add to basket</button>
-      						</div>
-     							
-     							<div className='product_overlay'>
-  					      		<h2>Added to basket</h2>
-  					      		<i className='fa fa-check'></i>
-      						</div>
-    						</div>
-   
-   						<div className='product3 col-md-3'>
-      						<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
-        							<p>Milo</p>
-        							<p>Price $10</p>
-       							<button>Add to basket</button>
-      						</div>
-      
-      						<div className='product_overlay'>
-        							<h2>Added to basket</h2>
-        							<i className='fa fa-check'></i>
-      						</div>
-    						</div>
-    
-    						<div className='product4 col-md-3'>
-     		 					<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-        							<p>Milo</p>
-        							<p>Price $10</p>
-        							<button>Add to basket</button>
-      						</div>
-     							
-     							<div className='product_overlay'>
-  					      		<h2>Added to basket</h2>
-  					      		<i className='fa fa-check'></i>
-      						</div>
-    						</div>
-
-                <div className='product5 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
+			<div>
+				<div className="crates-banner">
+                    <div className="crates-center">
+                        <div className="crates-banner-left">
+                            <img className="crates-bannerimg" src={require('../images/filcrate3.png')} alt=""/>
+                        </div>
+                        <div className="crates-banner-right">
+                            <h1>Exprience a wide variety of Philippine snacks delivered to you monthly!</h1>
+                        </div>
+                    </div>
+                    <img className="crates-banner-c9 floating" src={require('../images/cloud9.png')} alt=""/>
+                    <img className="crates-banner-canton floating" src={require('../images/canton_yellow.png')} alt=""/>
+                    <img className="crates-banner-piattos floating" src={require('../images/piattos_green.png')} alt=""/>
                 </div>
-
-                <div className='product6 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
+                <div className="crates-content">
+                    <div className="crates-about">
+                        <h3>About Our Monthly Crates</h3>
+                        <p>We love Filipino snacks! Here at FilCrate, you can experience what the Philippines has to offer through monthly crates filled with snacks, sweets, noodles, and other goodies. Every month is different so let us know which ones are your favorites!</p>
+                        <div className="crates-about-row">
+                            <div className="crates-about-col1">
+                                <i className ="material-icons crates-icons">public</i>
+                                <h5>Free Shipping</h5>
+                                <p>Crates ship for free around the world</p>
+                            </div>
+                            <div className="crates-about-col2">
+                                <i className ="material-icons crates-icons">access_time</i>
+                                <h5>Cancel Anytime</h5>
+                                <p>You can cancel your subscription anytime</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="style-eight"/>
+                    <div className="crates-select">
+                        <h3>Select your crate</h3>
+                        <p>FilCrate offers three subscription plans. Each tier offers a different variety of goodies!</p>
+                        <div className="crates-select-row">
+                            <div className="crates-select1">
+                                <h5>Standard Crate</h5>
+                                <img className="crates-selectimg" src={require('../images/filcrate1.png')} alt=""/>
+                                <p>Contains:</p>
+                                <ul>
+                                    <li>Two medium-sized chips snack</li>
+                                    <li>Two ramen noodles</li>
+                                    <li>One candy snack</li>
+                                </ul>
+                                <div className="crates-price">
+                                    <p>$10/month</p>
+                                    <button>Get Standard Crate</button>
+                                </div>
+                            </div>
+                            <div className="crates-select2">
+                                <h5>Premium Crate</h5>
+                                <img className="crates-selectimg" src={require('../images/filcrate2.png')} alt=""/>
+                                <p>Contains:</p>
+                                <ul>
+                                    <li>Three full-sized chips snack</li>
+                                    <li>Three ramen noodles</li>
+                                    <li>Two candy snack</li>
+                                    <li>A special random goodie!</li>
+                                </ul>
+                                <div className="crates-price">
+                                    <p>$20/month</p>
+                                    <button>Get Premium Crate</button>
+                                </div>
+                            </div>
+                            <div className="crates-select3">
+                                <h5>VIP Crate</h5>
+                                <img className="crates-selectimg" src={require('../images/filcrate3.png')} alt=""/>
+                                <p>Contains:</p>
+                                <ul>
+                                    <li>Four or more full-sized chips snack</li>
+                                    <li>Four or more ramen noodles</li>
+                                    <li>Three or more candy snack</li>
+                                    <li>Filipino canned foods</li>
+                                    <li>A special random goodie!</li>
+                                </ul>
+                                <div className="crates-price">
+                                    <p>$30/month</p>
+                                    <button>Get VIP Crate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div className='product7 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <div className='product8 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <div className='product9 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <div className='product10 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <div className='product11 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <div className='product12 col-md-3'>
-                  <div className='product_inner'>
-                      <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                      <p>Milo</p>
-                      <p>Price $10</p>
-                      <button>Add to basket</button>
-                  </div>
-                  
-                  <div className='product_overlay'>
-                      <h2>Added to basket</h2>
-                      <i className='fa fa-check'></i>
-                  </div>
-                </div>
-
-                <nav aria-label="Page navigation">
-                  <ul className="pagination">
-                    <li>
-                      <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                      <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>  
-              </div>
-  				</div>
 			</div>
         );
     }
