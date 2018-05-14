@@ -50,10 +50,10 @@ class Header extends Component {
         	<div style={{backgroundColor: bg}} className="header-layout">
         		<div className="header-container">
                     <a href="/" className="header-logo">
-                        <p className="header-border">
-                            <span style={{color: x.fil}} className="header-fil">Fil</span>
-                            <span style={{color: x.crate}} className="header-crate">Crate</span>
-                        </p>
+                        <div className="logo text-center">
+                            <span style={{color: x.fil}} className="header-fil">&nbsp;&nbsp;Fil</span>
+                            <span style={{color: x.crate}} className="header-crate">Crate&nbsp;&nbsp;</span>
+                        </div>
                     </a>
                     <a style={{color: x.color}} className="header-features" href="/crates">Crates</a>
                     <a style={{color: x.color}} className="header-features" href="/store">Store</a>

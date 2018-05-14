@@ -17,6 +17,7 @@
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0 10px;
 }
 
 .header-logo {
@@ -29,22 +30,24 @@
   text-decoration: none;
 }
 
-.header-border {
-  margin: 0;
-  text-align: center;
-  border-top: black 3px solid;
-  border-bottom: black 3px solid;
-  transition: 0.3s all;
+.logo {
+  margin: 5px 0;
+  
 }
 
 .header-fil {
   color: #990000;
   font-size: 2.5rem;
+  border-top: black 5px solid;
+  border-bottom: black 5px solid;
 }
 
 .header-crate {
   color: #000ecf;
   font-size: 2.5rem;
+  border-top: black 5px solid;
+  border-bottom: black 5px solid;
+ 
 }
 
 
