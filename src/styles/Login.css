@@ -1,24 +1,30 @@
 .containerLogIn {
+  font-family: 'Crimson Text', serif;
+  background-position-x: center;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	background-size: cover;
   width: 100%;
-	height: 90vh;
-}
-h1 {
-  color: #89D8E8;
+	height: 100vh;
 }
 
 .containerLogIn #login-form {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 55%;
   width: 5em;
   min-width: 600px;
-  background-color:   #FDD7E4;
-  font-family: sans-serif;
-  min-height: 35em;
+  min-height: 20em;
   color: white;
   border-radius: 10%;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.52);
+  transition: 0.3s all;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea 
+{
+  background-color: white;
 }
 
 .containerLogIn #login-form-content {
@@ -27,8 +33,17 @@ h1 {
 }
 
 .containerLogIn #login-form-content input {
-  padding: 10px;
+  padding-left: 10px;
   font-size: 1.2em;
+}
+
+.btn {
+  margin-top: 10px;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  background-color: #3e48cf;
 }
 
 .containerLogIn #login-form-content a {
