@@ -38,13 +38,13 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
-/*a {
+a {
   color: #fff;
 }
 
 a:hover {
   color: #fff;
-}*/
+}
 
 .fa-snapchat-ghost {
   background: #fffc00;

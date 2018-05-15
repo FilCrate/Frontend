@@ -7,14 +7,6 @@ class Crates extends Component {
         return (
 			<div>
 				<div className="crates-banner">
-                    <div className="crates-center">
-                        <div className="crates-banner-left">
-                            <img className="crates-bannerimg" src={require('../images/filcrate3.png')} alt=""/>
-                        </div>
-                        <div className="crates-banner-right">
-                            <h1>Exprience a wide variety of Philippine snacks delivered to you monthly!</h1>
-                        </div>
-                    </div>
                     <img className="crates-banner-c9 floating" src={require('../images/cloud9.png')} alt=""/>
                     <img className="crates-banner-canton floating" src={require('../images/canton_yellow.png')} alt=""/>
                     <img className="crates-banner-piattos floating" src={require('../images/piattos_green.png')} alt=""/>

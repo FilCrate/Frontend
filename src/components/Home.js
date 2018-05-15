@@ -10,8 +10,7 @@ class Home extends Component {
 				<div className="home-layout">
 					<div className="banner">
 						<h1 className="slogan">Getting you the best of Filipino Food</h1>
-						<button className="button1"> Shop Now </button>
-						<button className="button2"> Subscribe! </button>
+						<button className="button1"> <a href="/store">Shop Now </a></button>
 					</div> 
 					<div className="home-container">
 						<div className="about">
@@ -23,12 +22,13 @@ class Home extends Component {
 							</p>
 							<div className="products">
 								<div className="product">
-									<img className="img1" src={require('../images/box.jpg')}/>
+									<img className="img1" src={require('../images/filcrate3.png')}/>
 								</div>
 								<div className="product">
-									<img className="img2" src={require('../images/box.jpg')}/>
+									<img className="img2" src={require('../images/filcrate3.png')}/>
 								</div>
 							</div>
+							<button className="button2"> Subscribe! </button>
 						</div>
 						<hr className="style-eight"/>
 						<FeaturedItems />

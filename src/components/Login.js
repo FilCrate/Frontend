@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import AuthService from './AuthService';
 import '../styles/Login.css';
 
 
@@ -9,11 +10,12 @@ constructor() {
     this.state = {
         email: '',
         password: '',
-        isLoggedIn: false
+        redirect: false 
     }
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.Auth = new AuthService;
 }
 
 
@@ -27,37 +29,19 @@ handlePasswordChange(event) {
 
 handleSubmit(event) {
     event.preventDefault();
-    let {email, password} = this.state;
-    fetch("/login", {
-        method: "post",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        credentials: "same-origin",
-        // This is the body parameter
-        body: JSON.stringify({
-            email: email,
-            password: password
-        })
+    this.Auth.login(event, this.state.email, this.state.password);
+
+    this.setState({
+        redirect: true
     })
-    .then(res => {
-        if(res.status === 200) {
-            this.setState({isLoggedIn: true});        
-            this.props.onAuthChange(true);
-        }
-    })
-    .catch(err => {
-    console.log(err.message);
-    });
 }
 
 
     render() {
-        let isLoggedIn = this.state.isLoggedIn;
+        let isLoggedIn = this.Auth.loggedIn();
 
-        if(isLoggedIn) {
-            return(<Redirect to="/" />);
+        if(isLoggedIn || this.state.redirect) {
+            return(<Redirect to="/store" />);
         }
 
         return (
@@ -82,7 +66,7 @@ handleSubmit(event) {
                                 value={this.state.password} 
                                 onChange={this.handlePasswordChange} 
                                 required/>
-                            <button type="submit" className="btn btn-success col-4 mb-3 mx-auto">Login</button>
+                            <button onClick={this.handleSubmit} className="btn btn-success col-4 mb-3 mx-auto">Login</button>
                             <span className="col-12 text-white text-center">Don't have an account? <a href="/register">Register</a></span>
                         </div>
                     </div>
