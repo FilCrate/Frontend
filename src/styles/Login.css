@@ -8,6 +8,11 @@
 	height: 100vh;
 }
 
+h1 {
+  color: white;
+  font-family: 'Crimson Text';
+}
+
 .containerLogIn #login-form {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -15,7 +20,9 @@
   top: 55%;
   width: 5em;
   min-width: 600px;
-  min-height: 20em;
+  background-color: #b22342;
+  font-family: sans-serif;
+  min-height: 35em;
   color: white;
   border-radius: 10%;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.52);

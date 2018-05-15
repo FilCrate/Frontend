@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Header.css';
-
+import AuthService from './AuthService';
+import { Redirect } from 'react-router-dom';
 
 class Header extends Component {
     constructor() {
@@ -10,8 +11,11 @@ class Header extends Component {
             color: 'white',
             fil: 'white',
             crate: 'white',
-            shadow: ''
+            shadow: '',
+            link: "/"
         }
+        this.Auth = new AuthService;
+        this.login = this.login.bind(this);
     }
 
     componentDidMount() {     
@@ -44,10 +48,24 @@ class Header extends Component {
             }
         }
     }
+
+     login(e) {
+       // e.preventDefault();
+       console.log(this.Auth.loggedIn());
+        if(this.Auth.loggedIn()){
+            this.Auth.logout();
+        }else{
+            this.setState({link: "/login"})
+        }
+    }
     
     render() {
         const x = this.state;
         let bg = `rgb(255,255,255,${x.opacity})`;
+
+        if(this.state.redirected) {
+            return(<Redirect to="/login" />);
+        }
         return (
         	<div style={{backgroundColor: bg, boxShadow: x.shadow}} className="header-layout">
         		<div className="header-container">
@@ -59,7 +77,7 @@ class Header extends Component {
                     </a>
                     <a style={{color: x.color}} className="header-features" href="/crates">Crates</a>
                     <a style={{color: x.color}} className="header-features" href="/store">Store</a>
-                    <a style={{color: x.color}} className="header-features" href="/login">My Account</a>
+                    <a style={{color: x.color}} className="header-features" href={this.state.link} onClick={(e) => this.login(e)}>{(this.Auth.loggedIn()) ? "Logout" : "Login"}</a>
                     <a style={{color: x.color}} className="header-features" href="#">
                         <i style={{color: x.color}} className ="fa fa-shopping-cart header-features"></i>Cart
                     </a>      

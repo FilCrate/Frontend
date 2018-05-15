@@ -6,6 +6,7 @@ import Login from './components/Login';
 import StoreContainer from './components/StoreContainer';
 import ProductPage from './components/ProductPage';
 import Register from './components/Register';
+import Search from './components/Search';
 
 class Routes extends Component {
     render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
                     <Route exact path="/register"  component= {Register} />
                     <Route exact path="/store" component={StoreContainer}/>
                     <Route path='/product/:number' component={ProductPage}/>
+                    <Route exact path="/search" component={Search}/>
                 </Switch>
             </main>
         );

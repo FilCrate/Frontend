@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import AuthService from './AuthService';
 import '../styles/Login.css';
 import Image from '../images/login_bg.jpg';
 
@@ -10,11 +11,12 @@ constructor() {
     this.state = {
         username: '',
         password: '',
-        isLoggedIn: false
+        redirect: false 
     }
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.Auth = new AuthService;
 }
 
 
@@ -28,37 +30,19 @@ handlePasswordChange(event) {
 
 handleSubmit(event) {
     event.preventDefault();
-    let {username, password} = this.state;
-    fetch("/login", {
-        method: "post",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        credentials: "same-origin",
-        // This is the body parameter
-        body: JSON.stringify({
-            username: username,
-            password: password
-        })
+    this.Auth.login(event, this.state.email, this.state.password);
+
+    this.setState({
+        redirect: true
     })
-    .then(res => {
-        if(res.status === 200) {
-            this.setState({isLoggedIn: true});        
-            this.props.onAuthChange(true);
-        }
-    })
-    .catch(err => {
-    console.log(err.message);
-    });
 }
 
 
     render() {
-        let isLoggedIn = this.state.isLoggedIn;
+        let isLoggedIn = this.Auth.loggedIn();
 
-        if(isLoggedIn) {
-            return(<Redirect to="/" />);
+        if(isLoggedIn || this.state.redirect) {
+            return(<Redirect to="/store" />);
         }
 
         return (
