@@ -4,7 +4,6 @@ import Link from 'react-router'
 import '../styles/ItemCard.css';
 
 class ItemCard extends Component {
-
     getImage(){
         if(this.props.itemImage != null)
             return this.props.itemImage

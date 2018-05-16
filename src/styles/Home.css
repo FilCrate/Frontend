@@ -50,6 +50,7 @@ button
 {
   grid-column: 3;
   grid-row: 6;
+  padding: 10px 20px;
 }
 
 .button2

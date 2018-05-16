@@ -37,11 +37,11 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
-a {
+.myfooter a {
   color: #fff;
 }
 
-a:hover {
+.myfooter a:hover {
   color: #fff;
 }
 

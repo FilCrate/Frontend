@@ -10,28 +10,27 @@ class Home extends Component {
 				<div className="home-layout">
 					<div className="banner">
 						<h1 className="slogan">Getting you the best of Filipino Food</h1>
-						<button className="button1"> <a href="/store">Shop Now </a></button>
+						<a className="button1" href="/store"><button className="button1">Shop Now</button></a>
 					</div> 
 					<div className="home-container">
 						<div className="about">
 							<h2>What is FilCrate?</h2>
-							<p>Paragraphs are the building blocks of papers. 
-								Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
-								In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. 
-								A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). 
+							<hr className="style-eight"/>
+							<br/>
+							<p>
+								FilCrate is an ecommerce site providing delicious Filipino snacks. FilCrate also provides a monthly subscription service where customers get a special package (or Crates) containing random selection of Filipino snacks. 
 							</p>
 							<div className="products">
 								<div className="product">
-									<img className="img1" src={require('../images/filcrate3.png')}/>
+									<img className="img1" src={require('../images/filcrate2.png')}/>
 								</div>
 								<div className="product">
 									<img className="img2" src={require('../images/filcrate3.png')}/>
 								</div>
 							</div>
-							<button className="button2"> Subscribe! </button>
+							<br/>
+							<a className="button1" href="/crates"><button className="button2"> Subscribe! </button></a>
 						</div>
-						<hr className="style-eight"/>
-						<FeaturedItems />
 					</div>
 				</div>
 			</div>

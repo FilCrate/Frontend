@@ -25,7 +25,7 @@ class StoreContainer extends Component {
             }).then((respJson) => {
             const items = respJson.map(item => {
                 return item;
-            });
+			});
             this.setState({
                 data: items
             })

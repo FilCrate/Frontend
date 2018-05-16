@@ -6,38 +6,38 @@ import Image from '../images/login_bg.jpg';
 
 
 class Login extends Component {
-constructor() {
-    super();
-    this.state = {
-        username: '',
-        password: '',
-        redirect: false 
+    constructor() {
+        super();
+        this.state = {
+            username: '',
+            password: '',
+            redirect: false 
+        }
+        this.handleUsernameChange = this.handleUsernameChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.Auth = new AuthService;
     }
-    this.handleUsernameChange = this.handleUsernameChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.Auth = new AuthService;
-}
 
 
-handleUsernameChange(event) {
-    this.setState({username: event.target.value});
-}
-
-handlePasswordChange(event) {
-    this.setState({password: event.target.value});
-}
-
-handleSubmit(event) {
-    event.preventDefault();
-    this.Auth.login(event, this.state.username, this.state.password);
-
-    if(this.Auth.loggedIn()){
-         this.setState({
-        redirect: true
-    })
+    handleUsernameChange(event) {
+        this.setState({username: event.target.value});
     }
-}
+
+    handlePasswordChange(event) {
+        this.setState({password: event.target.value});
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        this.Auth.login(event, this.state.username, this.state.password).then(res => {
+            if (res.message === 'ok') {
+                this.setState({
+                    redirect: true
+                })
+            }
+        })
+    }
 
 
     render() {
@@ -69,7 +69,7 @@ handleSubmit(event) {
                                 value={this.state.password} 
                                 onChange={this.handlePasswordChange} 
                                 required/>
-                            <button style={{backgroundColor: '#000ecf'}}type="submit" className="btn btn-success col-4 mb-3 mx-auto">Login</button>
+                            <button style={{backgroundColor: '#000ecf'}} className="btn btn-success col-4 mb-3 mx-auto">Login</button>
                             <span className="col-12 text-white text-center">Don't have an account? <a href="/register">Register</a></span>
                         </div>
                     </div>
