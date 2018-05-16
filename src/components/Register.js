@@ -74,7 +74,7 @@ handleSubmit(event) {
         let isLoggedIn = this.state.isLoggedIn;
 
         if(isLoggedIn) {
-            return(<Redirect to="/store" />);
+            return(<Redirect to="/login" />);
         }
 
         return (

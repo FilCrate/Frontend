@@ -12,7 +12,7 @@ class Header extends Component {
             fil: 'white',
             crate: 'white',
             shadow: '',
-            link: "/"
+            link: "/"   
         }
         this.Auth = new AuthService;
         this.login = this.login.bind(this);
@@ -55,7 +55,8 @@ class Header extends Component {
         if(this.Auth.loggedIn()){
             this.Auth.logout();
         }else{
-            this.setState({link: "/login"})
+            this.setState({
+                link: "/login"})
         }
     }
     
@@ -63,9 +64,6 @@ class Header extends Component {
         const x = this.state;
         let bg = `rgb(255,255,255,${x.opacity})`;
 
-        if(this.state.redirected) {
-            return(<Redirect to="/login" />);
-        }
         return (
         	<div style={{backgroundColor: bg, boxShadow: x.shadow}} className="header-layout">
         		<div className="header-container">

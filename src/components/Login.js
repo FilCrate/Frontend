@@ -30,11 +30,13 @@ handlePasswordChange(event) {
 
 handleSubmit(event) {
     event.preventDefault();
-    this.Auth.login(event, this.state.email, this.state.password);
+    this.Auth.login(event, this.state.username, this.state.password);
 
-    this.setState({
+    if(this.Auth.loggedIn()){
+         this.setState({
         redirect: true
     })
+    }
 }
 
 
