@@ -59,7 +59,7 @@ class ProductPage extends Component {
                             <div className="ProductPage-col1">
                                 <img src={this.state.product.image} alt=""/>
                             </div>
-                            <div className="info ProductPage-col2 text-left">
+                            <div className="info2 ProductPage-col2 text-left">
                                 <p><span className="bold">Price: </span>${this.state.product.price}</p>
                                 <p><span className="bold">Stock: </span>{this.state.product.stock}</p>
                                 <p><span className="bold">Rating: </span>{this.state.product.rating}/5</p>
