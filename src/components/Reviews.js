@@ -56,7 +56,7 @@ class Reviews extends Component {
                     </div>
                 )}
                 {(this.state.readyState === 'rejected') && (
-                    <p>Error loading ratings for this product.</p>
+                    <p>No Reviews for this product.</p>
                 )}
                 {console.log(this)}
             </div>

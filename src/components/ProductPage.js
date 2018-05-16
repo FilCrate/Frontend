@@ -52,15 +52,23 @@ class ProductPage extends Component {
                     <p>Loading...</p>
                 )}
                 {this.state.readyState === 'fulfilled' && (
-                    <div>
-                        <h2>{this.state.product.name}</h2>
-                        <img src={this.state.product.image} alt=""/>
-                        <p>Price: ${this.state.product.price}</p>
-                        <p>Stock: {this.state.product.stock}</p>
-                        <p>Rating: {this.state.product.rating}/5</p>
-                        <p>Category: {this.state.product.category}</p>
-                        <p>Weight: {this.state.product.weight} lbs</p>
-                        <p>SKU: {this.state.product.sku}</p>
+                    <div className="crates-content text-center">
+                        <h2 className="ProductPage-title">{this.state.product.name}</h2> 
+                        <hr className="style-eight"/>
+                        <div className="ProductPage-container">
+                            <div className="ProductPage-col1">
+                                <img src={this.state.product.image} alt=""/>
+                            </div>
+                            <div className="info ProductPage-col2 text-left">
+                                <p><span className="bold">Price: </span>${this.state.product.price}</p>
+                                <p><span className="bold">Stock: </span>{this.state.product.stock}</p>
+                                <p><span className="bold">Rating: </span>{this.state.product.rating}/5</p>
+                                <p><span className="bold">Category: </span>{this.state.product.category}</p>
+                                <p><span className="bold">Weight: </span>{this.state.product.weight} lbs</p>
+                                <p><span className="bold">SKU: </span>{this.state.product.sku}</p>
+                            </div>
+                        </div>
+                        <button>Add to cart</button>
                         <Reviews productId={this.props.match.params.number}/>
                     </div>
                 )}
