@@ -117,7 +117,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
     display: flex;
-    color: white;
+    color: black;
 }
 
 .crates-select1, .crates-select2, .crates-select3 {

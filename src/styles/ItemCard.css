@@ -21,11 +21,20 @@
 }
 
 #results {
-	margin-top: 100px;
+	margin-top: 10px;
 }
 
 .pagination li.active a {
 	background: blue;
 	padding: 2px;
 	color: #fff;
+}
+
+.search-container {
+	margin-top: 100px;
+}
+
+.search {
+	margin: 20px;
+	padding: 0 300px;
 }
