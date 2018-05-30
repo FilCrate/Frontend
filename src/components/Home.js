@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FeaturedItems from './FeaturedItems';
 import '../styles/Home.css';
 
 
@@ -22,10 +21,10 @@ class Home extends Component {
 							</p>
 							<div className="products">
 								<div className="product">
-									<img className="img1" src={require('../images/filcrate2.png')}/>
+									<img className="img1" src={require('../images/filcrate2.png')} alt=""/>
 								</div>
 								<div className="product">
-									<img className="img2" src={require('../images/filcrate3.png')}/>
+									<img className="img2" src={require('../images/filcrate3.png')} alt=""/>
 								</div>
 							</div>
 							<br/>

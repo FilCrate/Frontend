@@ -7,9 +7,6 @@ class Footer extends Component {
         return (
             <div className="myfooter">
                 <p>FilCrate 2018 &copy;</p>
-            	<a href="#" className="fa fa-facebook"></a>
-				<a href="#" id="insta" lassName="fa fa-instagram"></a>
-            	<a href="#" className="fa fa-snapchat-ghost"></a>
             </div>					
         );
     }

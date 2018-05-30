@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import '../styles/Login.css';
 import Image from '../images/register_bg.jpg';
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Header.css';
 import AuthService from './AuthService';
-import { Redirect } from 'react-router-dom';
 
 class Header extends Component {
     constructor() {
@@ -14,7 +13,7 @@ class Header extends Component {
             shadow: '',
             link: "/"   
         }
-        this.Auth = new AuthService;
+        this.Auth = new AuthService();
         this.login = this.login.bind(this);
     }
 
@@ -76,7 +75,7 @@ class Header extends Component {
                     <a style={{color: x.color}} className="header-features" href="/crates">Crates</a>
                     <a style={{color: x.color}} className="header-features" href="/store">Store</a>
                     <a style={{color: x.color}} className="header-features" href={this.state.link} onClick={(e) => this.login(e)}>{(this.Auth.loggedIn()) ? "Logout" : "Login"}</a>
-                    <a style={{color: x.color}} className="header-features" href="#">
+                    <a style={{color: x.color}} className="header-features" href="">
                         <i style={{color: x.color}} className ="fa fa-shopping-cart header-features"></i>Cart
                     </a>      
                 </div>

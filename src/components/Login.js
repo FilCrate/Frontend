@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import AuthService from './AuthService';
 import '../styles/Login.css';
 import Image from '../images/login_bg.jpg';
@@ -16,7 +16,7 @@ class Login extends Component {
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.Auth = new AuthService;
+        this.Auth = new AuthService();
     }
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row, Input, Select} from 'react-materialize';
+import { Row, Input } from 'react-materialize';
 import '../styles/Search.css';
 
 class Search extends Component {
@@ -9,7 +9,6 @@ class Search extends Component {
 			value: "Snacks"
 		}
 	}
-
 
 	render() {
 		return(
