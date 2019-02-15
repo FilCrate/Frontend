@@ -9,22 +9,22 @@ import Register from './components/Register';
 import Search from './components/Search';
 
 class Routes extends Component {
-    render() {
-        return (
-            <main>
-                <Switch>
-                    <Route exact path="/"  component= {Home} />
-                    <Route exact path="/crates" component = {Crates} />
-                    <Route exact path="/login"  component= {Login} />
-                    <Route exact path="/register"  component= {Register} />
-                    <Route exact path="/store" component={StoreContainer}/>
-                    <Route path='/product/:number' component={ProductPage}/>
-                    <Route exact path="/search" component={Search}/>
-                </Switch>
-            </main>
-        );
-    };
-};
+  render() {
+    return (
+      <main>
+        <Switch>
+          <Route exact path="/"  component= {Home} />
+          <Route exact path="/crates" component = {Crates} />
+          <Route exact path="/login"  component= {Login} />
+          <Route exact path="/register"  component= {Register} />
+          <Route exact path="/store" component={StoreContainer}/>
+          <Route path='/product/:number' component={ProductPage}/>
+          <Route exact path="/search" component={Search}/>
+        </Switch>
+      </main>
+    );
+  }
+}
 
 
 export default Routes;
