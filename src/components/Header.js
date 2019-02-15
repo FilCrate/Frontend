@@ -50,12 +50,10 @@ class Header extends Component {
 
   login(e) {
     // e.preventDefault();
-    console.log(this.Auth.loggedIn());
     if(this.Auth.loggedIn()){
       this.Auth.logout();
-    }else{
-      this.setState({
-        link: '/login'});
+    } else {
+      this.setState({ link: '/login' });
     }
   }
     
@@ -64,8 +62,8 @@ class Header extends Component {
     let bg = `rgb(255,255,255,${x.opacity})`;
 
     return (
-        	<div style={{backgroundColor: bg, boxShadow: x.shadow}} className="header-layout">
-        		<div className="header-container">
+      <div style={{backgroundColor: bg, boxShadow: x.shadow}} className="header-layout">
+        <div className="header-container">
           <a href="/" className="header-logo">
             <div className="logo text-center">
               <span style={{color: x.fil}} className="header-fil">&nbsp;&nbsp;Fil</span>
@@ -79,7 +77,7 @@ class Header extends Component {
             <i style={{color: x.color}} className ="fa fa-shopping-cart header-features"></i>Cart
           </a>      
         </div>
-        	</div>
+      </div>
     );
   }
 }

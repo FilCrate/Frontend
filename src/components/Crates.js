@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Crates.css';
 
-
 class Crates extends Component {
   render() {
     return (

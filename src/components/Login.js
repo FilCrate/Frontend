@@ -4,7 +4,6 @@ import AuthService from './AuthService';
 import '../styles/Login.css';
 import Image from '../images/login_bg.jpg';
 
-
 class Login extends Component {
   constructor() {
     super();
@@ -18,7 +17,6 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.Auth = new AuthService();
   }
-
 
   handleUsernameChange(event) {
     this.setState({username: event.target.value});

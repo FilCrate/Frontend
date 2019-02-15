@@ -16,14 +16,14 @@ class Search extends Component {
         <Row>
           <Input className="searchField" placeholder="Here"/>
           <Input className="selectField" type='select' defaultValue={this.state.value}>
-					    <option value=' '>All</option>
-					    <option value='Noodles'>Noodles</option>
-					    <option value='Snacks'>Snacks</option>
-					    <option value='Drinks'>Drinks</option>
-					    <option value='Bottled/Canned'>Bottled/Canned</option>
+            <option value=' '>All</option>
+            <option value='Noodles'>Noodles</option>
+            <option value='Snacks'>Snacks</option>
+            <option value='Drinks'>Drinks</option>
+            <option value='Bottled/Canned'>Bottled/Canned</option>
           </Input>
         </Row>
-        	</div>
+      </div>
     );
   }
 	

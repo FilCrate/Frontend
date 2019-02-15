@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/ProductPage.css';
 import Reviews from './Reviews';
 
-
 class ProductPage extends Component {
   constructor(props) {
     super(props);

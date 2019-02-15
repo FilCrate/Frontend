@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import '../styles/Login.css';
 import Image from '../images/register_bg.jpg';
 
-
 class Register extends Component {
   constructor() {
     super();
@@ -68,7 +67,6 @@ class Register extends Component {
         });
     }
   }
-
 
   render() {
     let isLoggedIn = this.state.isLoggedIn;

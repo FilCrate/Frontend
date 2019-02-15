@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import FeaturedItems from './FeaturedItems';
-
 import '../styles/Crates2.css';
-
 
 class Crates2 extends Component {
   constructor() {
@@ -12,7 +10,6 @@ class Crates2 extends Component {
     };
     this.handleSearchChange = this.handleSearchChange.bind(this);
   }
-
 
   handleSearchChange(event) {
     this.setState({search: event.target.value});
@@ -43,13 +40,12 @@ class Crates2 extends Component {
     // });
   }
 
-
   render() {
     return (
-        	<div>
-  		  		<div onSubmit={this.handleSubmit} className="containerCrates">
-  				    <div className="row">
-    				    <div className="searchBarMain col-md-5">
+      <div>
+        <div onSubmit={this.handleSubmit} className="containerCrates">
+          <div className="row">
+            <div className="searchBarMain col-md-5">
               <i className="material-icons searchBarSearchIcon Select">search</i>
               <input 
                 type="text" 
@@ -62,9 +58,8 @@ class Crates2 extends Component {
                 required />
             </div>    
           
-  				      
             <div className="col-md-4">
-  				        <div className="dropdown">
+              <div className="dropdown">
   						  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   						    Categories
   						  </button>
@@ -74,65 +69,65 @@ class Crates2 extends Component {
   						    <a className="dropdown-item" href="#">Snack</a>
   						  </div>
   						</div>
-  				      </div>
-  				    </div>
+            </div>
+          </div>
 
-  				    <div className='row Products'>
-    						<div className='product1 col-md-3'>
-      						<div className='product_inner '>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
-        							<p>Milo</p>
-        							<p>Price $10</p>
-       							<button>Add to basket</button>
-      						</div>
-      
-      						<div className='product_overlay'>
-        							<h2>Added to basket</h2>
-        							<i className='fa fa-check'></i>
-      						</div>
-    						</div>
+          <div className='row Products'>
+            <div className='product1 col-md-3'>
+              <div className='product_inner '>
+                <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
+                <p>Milo</p>
+                <p>Price $10</p>
+                <button>Add to basket</button>
+              </div>
+  
+              <div className='product_overlay'>
+                <h2>Added to basket</h2>
+                <i className='fa fa-check'></i>
+              </div>
+            </div>
     
-    						<div className='product2 col-md-3'>
-     		 					<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-        							<p>Milo</p>
-        							<p>Price $10</p>
-        							<button>Add to basket</button>
-      						</div>
-     							
-     							<div className='product_overlay'>
-  					      		<h2>Added to basket</h2>
-  					      		<i className='fa fa-check'></i>
-      						</div>
-    						</div>
-   
-   						<div className='product3 col-md-3'>
-      						<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
-        							<p>Milo</p>
-        							<p>Price $10</p>
-       							<button>Add to basket</button>
-      						</div>
-      
-      						<div className='product_overlay'>
-        							<h2>Added to basket</h2>
-        							<i className='fa fa-check'></i>
-      						</div>
-    						</div>
+            <div className='product2 col-md-3'>
+              <div className='product_inner'>
+                  <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
+                  <p>Milo</p>
+                  <p>Price $10</p>
+                  <button>Add to basket</button>
+              </div>
+              
+              <div className='product_overlay'>
+                  <h2>Added to basket</h2>
+                  <i className='fa fa-check'></i>
+              </div>
+            </div>
+
+            <div className='product3 col-md-3'>
+              <div className='product_inner'>
+                <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300' />
+                <p>Milo</p>
+                <p>Price $10</p>
+                <button>Add to basket</button>
+              </div>
     
-    						<div className='product4 col-md-3'>
-     		 					<div className='product_inner'>
-        							<img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-        							<p>Milo</p>
-        							<p>Price $10</p>
-        							<button>Add to basket</button>
-      						</div>
-     							
-     							<div className='product_overlay'>
-  					      		<h2>Added to basket</h2>
-  					      		<i className='fa fa-check'></i>
-      						</div>
-    						</div>
+              <div className='product_overlay'>
+                <h2>Added to basket</h2>
+                <i className='fa fa-check'></i>
+              </div>
+            </div>
+    
+            <div className='product4 col-md-3'>
+              <div className='product_inner'>
+                <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
+                <p>Milo</p>
+                <p>Price $10</p>
+                <button>Add to basket</button>
+              </div>
+              
+              <div className='product_overlay'>
+                <h2>Added to basket</h2>
+                <i className='fa fa-check'></i>
+              </div>
+            </div>
 
             <div className='product5 col-md-3'>
               <div className='product_inner'>
@@ -266,7 +261,7 @@ class Crates2 extends Component {
               </ul>
             </nav>  
           </div>
-  				</div>
+        </div>
       </div>
     );
   }

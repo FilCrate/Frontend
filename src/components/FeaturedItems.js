@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/FeaturedItems.css';
-import ItemList from './ItemList';
 import ItemCard from './ItemCard';
-
 
 class FeaturedItems extends Component {
   constructor(){
@@ -21,15 +19,15 @@ class FeaturedItems extends Component {
     let items = [];
     val.map(x => {
       fetch(`http://localhost:8000/products/${x}`)
-        .then((resp) => {
-          if(resp.ok){
-            return resp.json();
-          }else{
-            return [];
-          }
-        }).then((resp) => {
-          items.push(resp);
-        });
+      .then((resp) => {
+        if(resp.ok){
+          return resp.json();
+        } else {
+          return [];
+        }
+      }).then((resp) => {
+        items.push(resp);
+      });
     }
     );
     this.setState({data: items});
@@ -51,7 +49,6 @@ class FeaturedItems extends Component {
   }
 
   render () {
-    console.log('BAKA',this.state.data);
     return (
       <div className="featured">
         <div className="fi"> Featured Items </div>
@@ -61,8 +58,6 @@ class FeaturedItems extends Component {
     );
   }
 }
-
-
 
 
 export default FeaturedItems;

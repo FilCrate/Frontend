@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Reviews.css';
 
-
 class Reviews extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +21,6 @@ class Reviews extends Component {
       this.setState({
         readyState: 'loading'
       });
-      console.log('ADFASDF');
       fetch(`http://localhost:8000/reviews/${this.props.productId}`).then(response => {
         console.log(response);
         if (!response.ok) {
@@ -58,7 +56,6 @@ class Reviews extends Component {
         {(this.state.readyState === 'rejected') && (
           <p>No Reviews for this product.</p>
         )}
-        {console.log(this)}
       </div>
     );
   }

@@ -1,14 +1,12 @@
-.home-layout
-{
+.home-layout {
 	display: grid;
 	margin: auto;
-  padding: 0;
+	padding: 0;
 	grid-template-columns: 10% 80% 10%; 
 	grid-template-rows: 60% 20% 40%;
 }
 
-.banner
-{
+.banner {
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(9,1fr);
 	grid-column: 1 / span 3;
@@ -23,8 +21,7 @@
 	grid-gap: 10px;
 }
 
-.slogan
-{
+.slogan {
   color: #fff;
   grid-column: 2/-1;
   grid-row: 3/ -1;
@@ -32,8 +29,7 @@
   justify-content: center;
 }
 
-button
-{
+button {
   color: #fff;
   border: 4px solid black;
   border-radius: 10px;
@@ -46,15 +42,13 @@ button
 	background-color: rgba(175, 0, 0, .3);
 }
 
-.banner .button1
-{
+.banner .button1 {
   grid-column: 3;
   grid-row: 6;
   padding: 10px 20px;
 }
 
-.button2
-{
+.button2 {
   padding: 10px 40px;
   background-color:rgba(175, 0, 0, .5);
 }
@@ -63,31 +57,26 @@ button:hover {
 	background-color: rgba(0, 14, 207, .3);
 }
 
-.home-container 
-{
+.home-container {
 	grid-column-start: 2;
 }
 
-.about 
-{
+.about {
 	text-align: center;
 	padding: 20px;
 }
 
-.about h1
-{
+.about h1 {
 	color: #000;
 }
 
-.about p
-{
+.about p {
 	padding: 0 10vw 20px 10vw;
 	line-height: 1.6em;
 	font-family: 'Open Sans', sans-serif;
 }
 
-.products
-{
+.products {
 	display: grid;
 	grid-gap: 15px;
 	grid-template-columns: repeat(auto-fit, 1fr);
@@ -95,8 +84,7 @@ button:hover {
 	"img1 img2"
 }
 
-.products .product img
-{
+.products .product img {
 	height: auto; 
 	width: auto; 
 	max-width: 22em; 

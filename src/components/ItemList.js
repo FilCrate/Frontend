@@ -3,7 +3,7 @@ import ItemCard from './ItemCard';
 
 class ItemList extends Component {
   renderItemCards() {
-    return(
+    return (
       this.props.items.map(item => 
         <ItemCard 
           className="col-md-4 col-sm-6"
@@ -16,7 +16,6 @@ class ItemList extends Component {
       )
     );
   }
-
 
   // this.renderItemCard() so that its always being called
   render() {

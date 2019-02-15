@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/ItemCard.css';
 
 class ItemCard extends Component {
-  getImage(){
+  getImage() {
     if(this.props.itemImage != null)
       return this.props.itemImage;
     else
