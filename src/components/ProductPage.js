@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/ProductPage.css';
 import Reviews from './Reviews';
 
@@ -13,7 +14,7 @@ class ProductPage extends Component {
     // this.deleteProduct = this.deleteProduct.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.getProduct();
   }
 
@@ -36,7 +37,7 @@ class ProductPage extends Component {
           product: json,
           readyState: 'fulfilled'
         });
-      }).catch(error => {
+      }).catch(() => {
         this.setState({
           readyState: 'rejected'
         });
@@ -78,6 +79,10 @@ class ProductPage extends Component {
     );
   }
 }
+
+ProductPage.propTypes = {
+  match: PropTypes.object,
+};
 
 
 export default ProductPage;

@@ -48,7 +48,7 @@ class Header extends Component {
     };
   }
 
-  login(e) {
+  login() {
     // e.preventDefault();
     if(this.Auth.loggedIn()){
       this.Auth.logout();

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FeaturedItems from './FeaturedItems';
 import '../styles/Crates2.css';
 
 class Crates2 extends Component {
@@ -15,7 +14,7 @@ class Crates2 extends Component {
     this.setState({search: event.target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     // event.preventDefault();
     // let {search} = this.state;
     // fetch("/products", {
@@ -49,8 +48,7 @@ class Crates2 extends Component {
               <i className="material-icons searchBarSearchIcon Select">search</i>
               <input 
                 type="text" 
-                name="header-search" 
-                value="" 
+                name="header-search"
                 id="searchBarInput"
                 placeholder="Search..."
                 value={this.state.search} 
@@ -60,15 +58,15 @@ class Crates2 extends Component {
           
             <div className="col-md-4">
               <div className="dropdown">
-  						  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  						    Categories
-  						  </button>
-  						  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  						    <a className="dropdown-item" href="#">Fruit</a>
-  						    <a className="dropdown-item" href="#">Sweet</a>
-  						    <a className="dropdown-item" href="#">Snack</a>
-  						  </div>
-  						</div>
+                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categories
+                </button>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a className="dropdown-item" href="#">Fruit</a>
+                  <a className="dropdown-item" href="#">Sweet</a>
+                  <a className="dropdown-item" href="#">Snack</a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -89,15 +87,15 @@ class Crates2 extends Component {
     
             <div className='product2 col-md-3'>
               <div className='product_inner'>
-                  <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
-                  <p>Milo</p>
-                  <p>Price $10</p>
-                  <button>Add to basket</button>
+                <img src='https://www.jbrwholesale.com.sg/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/m/i/milo_packet_drinks_200_ml.jpg' width='300'/>
+                <p>Milo</p>
+                <p>Price $10</p>
+                <button>Add to basket</button>
               </div>
               
               <div className='product_overlay'>
-                  <h2>Added to basket</h2>
-                  <i className='fa fa-check'></i>
+                <h2>Added to basket</h2>
+                <i className='fa fa-check'></i>
               </div>
             </div>
 

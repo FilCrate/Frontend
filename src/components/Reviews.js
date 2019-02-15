@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Reviews.css';
 
 class Reviews extends Component {
@@ -22,7 +23,6 @@ class Reviews extends Component {
         readyState: 'loading'
       });
       fetch(`http://localhost:8000/reviews/${this.props.productId}`).then(response => {
-        console.log(response);
         if (!response.ok) {
           throw new Error();
         }
@@ -32,7 +32,7 @@ class Reviews extends Component {
           ratings: json,
           readyState: 'fulfilled'
         });
-      }).catch(error => {
+      }).catch(() => {
         this.setState({
           readyState: 'rejected'
         });
@@ -61,5 +61,8 @@ class Reviews extends Component {
   }
 }
 
+Reviews.propTypes = {
+  productId: PropTypes.number,
+};
 
 export default Reviews;

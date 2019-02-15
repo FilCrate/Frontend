@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ItemCard from './ItemCard';
 
 class ItemList extends Component {
@@ -26,5 +27,9 @@ class ItemList extends Component {
     );
   }
 }
+
+ItemList.propTypes = {
+  items: PropTypes.object,
+};
 
 export default ItemList;

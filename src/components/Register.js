@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import '../styles/Login.css';
 import Image from '../images/register_bg.jpg';
@@ -56,14 +57,10 @@ class Register extends Component {
         })
       })
         .then(res => {
-          console.log(res);
           if(res.status === 200) {
             this.setState({isLoggedIn: true});        
             this.props.onAuthChange(true);
           }
-        })
-        .catch(err => {
-          console.log(err.message);
         });
     }
   }
@@ -124,5 +121,9 @@ class Register extends Component {
     );
   }
 }
+
+Register.propTypes = {
+  onAuthChange: PropTypes.func,
+};
 
 export default Register;

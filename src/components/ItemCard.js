@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/ItemCard.css';
 
 class ItemCard extends Component {
@@ -8,7 +9,6 @@ class ItemCard extends Component {
     else
       return require('../images/milo.jpg');
   }
-
 
   render () {
     return (
@@ -24,6 +24,13 @@ class ItemCard extends Component {
     );
   }
 }
+
+ItemCard.propTypes = {
+  itemImage: PropTypes.object,
+  itemId: PropTypes.number,
+  itemName: PropTypes.string,
+  itemPrice: PropTypes.number,
+};
 
 
 export default ItemCard;

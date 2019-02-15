@@ -68,7 +68,7 @@ class Login extends Component {
                 onChange={this.handlePasswordChange} 
                 required/>
               <button style={{backgroundColor: '#000ecf'}} className="btn btn-success col-4 mb-3 mx-auto">Login</button>
-              <span className="col-12 text-white text-center">Don't have an account? <a href="/register">Register</a></span>
+              <span className="col-12 text-white text-center">Dont have an account? <a href="/register">Register</a></span>
             </div>
           </div>
         </form>

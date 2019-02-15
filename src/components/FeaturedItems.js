@@ -19,15 +19,15 @@ class FeaturedItems extends Component {
     let items = [];
     val.map(x => {
       fetch(`http://localhost:8000/products/${x}`)
-      .then((resp) => {
-        if(resp.ok){
-          return resp.json();
-        } else {
-          return [];
-        }
-      }).then((resp) => {
-        items.push(resp);
-      });
+        .then((resp) => {
+          if(resp.ok){
+            return resp.json();
+          } else {
+            return [];
+          }
+        }).then((resp) => {
+          items.push(resp);
+        });
     }
     );
     this.setState({data: items});
